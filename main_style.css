@@ -187,12 +187,14 @@ a:hover{
 }
 
 .polygon {
-    float:left; 
+    position: absolute;
+     
     width:300;
     height:300;
     background-color:#3498db; 
-    transform:rotate(-25deg); 
-    z-index:3;
-    margin-left:89%;
-    margin-bottom:200%; 
-    }
+    transform:rotate(-20deg); 
+    z-index:15;
+    top:0;
+    left:100%;
+    margin-left:-80px; 
+}
