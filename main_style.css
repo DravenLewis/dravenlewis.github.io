@@ -6,8 +6,9 @@ body{
     background:url("Images/footer_lodyas.png");
     background-size:cover;
     background-repeat:no-repeat;
+    background-attachment:fixed;
     margin:0px;
-    min-height:900px;
+    min-height:400px;
     height:auto:
 }
 
@@ -19,6 +20,13 @@ body{
 }
 
 
+a{
+    text-decoration:none;
+    color:gray;
+}
+a:hover{
+    color:darkgray;
+}
 
 
 .picture-container img{
@@ -69,9 +77,10 @@ body{
     margin:0px;
     width:100%;
     height:64px;
-    background:rgba(0,0,0,0.5);
+    background:rgba(0,0,0,0.7);
     position:fixed;
     top:0px;
+    
 }
 
 .nav_bar_head {
@@ -84,9 +93,106 @@ body{
 
 .nav_bar_header {
     width:100%;
-    height:196px;
-    margin:1px;
+    height:296px;
+    margin-bottom:1px;
     background:url(Images/Background.jpg);
     background-size:cover;
     background-repeat:no-repeat;
 }
+
+
+.nav_bar_links{
+    font-family:Quark; 
+    margin:0px;
+    width:100%;
+    height:27px;
+    background:rgba(0,0,0,0.5);
+    position:fixed;
+    top:64px;
+    text-align: center;
+    color:white;
+}
+
+
+.nav_bar_links a{
+    margin-left:20px;
+    font-size:24px; 
+    width:100px;
+    color:white; !important
+}
+
+.nav_bar_links a:hover{
+    text-shadow:#fff 0px 0px 7px;  
+}
+
+
+
+#nav_bar_link_tab {
+    width:100px;
+    height:27px;
+}
+
+#nav_bar_link_tab:hover{
+    background:rgba(0,0,0,0.9); 
+}
+
+.content_contatiner {
+    margin:0px;
+    width:auto;
+    min-height:200px; 
+    height:auto;
+    background:rgba(0,0,0,0.3);
+    margin-left:10px;
+    margin-right:10px; 
+    margin-top:15px;
+    margin-bottom:15px;
+    
+}
+
+.inner_content_container{
+    margin:0px;
+    width:auto;
+    min-height:300px; 
+    height:auto;
+    background:#fff;
+    color:#000;
+    font-family:Quark; 
+}
+
+#content_divider {
+    width:auto;
+    height:2px;
+    margin:20px;
+    background:#A1A1A1;
+}
+
+#profile_pic {
+    width:128;
+    height:128;
+    border:5px solid rgba(0,0,0,0.5);
+    z-index:2;
+    margin-left:20px;
+}
+#profile_pic img{
+    width:128px;
+    height:128px; 
+   
+}
+
+#about_container {
+    margin-top:-96px; 
+    width:auto;
+    height:200px;
+    border:3px solid #131313;
+}
+
+.polygon {
+    float:left; 
+    width:300;
+    height:300;
+    background-color:#3498db; 
+    transform:rotate(-25deg); 
+    z-index:3;
+    margin-left:89%;
+    margin-bottom:200%; 
+    }
