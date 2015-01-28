@@ -149,6 +149,11 @@ a:hover{
     
 }
 
+.content_contatiner:hover{
+     background:rgba(16,238,238,0.9);
+}
+
+
 .inner_content_container{
     margin:0px;
     width:auto;
@@ -198,3 +203,23 @@ a:hover{
     left:100%;
     margin-left:-80px; 
 }
+.nav_bar_header_alt {
+    
+    width:100%;
+    height:296px;
+    margin-top:20px; 
+    margin-bottom:1px;
+    background:url(Images/quantum.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+    
+    color:white;
+    font-family:quark;
+    font-size:48px; 
+}
+
+
+.nav_bar_header_alt h1{margin:0px;}
+.nav_bar_header_alt button{width:150;height:75;margin:0px;border:1px solid #ffffff;background:rgba(0,0,0,0);border-radius:15;color:white;font-family:Quark;font-size:24px;}
+.nav_bar_header_alt button:hover{background:rgba(0,0,0,0.4);}
+
