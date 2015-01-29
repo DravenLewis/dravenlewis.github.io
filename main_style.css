@@ -15,7 +15,7 @@ body{
 
 @font-face{
    font-family:'Quark';
-   src: url(Fonts/QuarcaCondLight.otf) format('OpenType');
+   src: url('Fonts/QuarcaCondLight.otf?#iefix') format('OpenType');
         
 }
 
