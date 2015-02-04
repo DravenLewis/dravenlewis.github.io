@@ -28,6 +28,21 @@ a:hover{
     color:darkgray;
 }
 
+button{
+    height:50px;
+    width:150px;
+    border:1px solid #3498db;
+    background:rgba(0,0,0,0);
+    border-radius:30px;
+    color:white;
+    font-family:Helvetica;
+    font-size:19px; 
+}
+
+button:hover{
+    background:#3498db;
+}
+
 
 .picture-container img{
     border-radius:50%; 
@@ -98,6 +113,7 @@ a:hover{
     background:url(Images/Background.jpg);
     background-size:cover;
     background-repeat:no-repeat;
+    
 }
 
 
@@ -123,6 +139,7 @@ a:hover{
 
 .nav_bar_links a:hover{
     text-shadow:#fff 0px 0px 7px;  
+    box-shadow:#fff 0px 0px 7px;  
 }
 
 
@@ -142,84 +159,41 @@ a:hover{
     min-height:200px; 
     height:auto;
     background:rgba(0,0,0,0.3);
-    margin-left:10px;
-    margin-right:10px; 
+    margin-left:25px;
+    margin-right:25px; 
     margin-top:15px;
     margin-bottom:15px;
     
 }
 
-.content_contatiner:hover{
+#cyanize:hover{
      background:#3498db;
 }
 
 
 .inner_content_container{
-    margin:0px;
+    margin-top:1px;
     width:auto;
     min-height:300px; 
     height:auto;
     background:#fff;
     color:#000;
     font-family:Quark; 
+    padding:1px;
 }
 
-#content_divider {
-    width:auto;
-    height:2px;
-    margin:20px;
-    background:#A1A1A1;
-}
-
-#profile_pic {
-    width:128;
-    height:128;
-    border:5px solid rgba(0,0,0,0.5);
-    z-index:2;
-    margin-left:20px;
-}
-#profile_pic img{
-    width:128px;
-    height:128px; 
-   
-}
-
-#about_container {
-    margin-top:-96px; 
-    width:auto;
-    height:200px;
-    border:3px solid #131313;
-}
-
-.polygon {
-    position: absolute;
-     
-    width:300;
-    height:300;
-    background-color:#3498db; 
-    transform:rotate(-20deg); 
-    z-index:15;
-    top:0;
-    left:100%;
-    margin-left:-80px; 
-}
-.nav_bar_header_alt {
-    
-    width:100%;
-    height:296px;
-    margin-top:20px; 
-    margin-bottom:1px;
-    background:url(Images/quantum.png);
-    background-size:cover;
-    background-repeat:no-repeat;
-    
-    color:white;
-    font-family:quark;
-    font-size:48px; 
-}
-
-
+#content_divider{width:auto;height:2px;margin:20px;background:#A1A1A1;}
+#profile_pic {width:128;height:128;border:5px solid rgba(0,0,0,0.5);z-index:2;margin-left:20px;}
+#profile_pic img{width:128px;height:128px; }
+#about_container {margin-top:-96px;width:auto;height:200px;border:3px solid #131313;}
+.polygon {position: absolute;width:300;height:300;background-color:#3498db;transform:rotate(-20deg);z-index:15;top:0;left:100%;margin-left:-80px;}
+.nav_bar_header_alt {width:100%;height:296px;margin-top:20px; margin-bottom:1px;background:url(Images/quantum.png);background-size:cover;background-repeat:no-repeat;
+                    color:white;font-family:quark;font-size:48px;}
+.content_contatiner p,h1,h2,h3,h4,h5,h6{margin:10px}
 .nav_bar_header_alt h1{margin:0px;}
 .nav_bar_header_alt button{width:150;height:75;margin:0px;border:1px solid #ffffff;background:rgba(0,0,0,0);border-radius:15;color:white;font-family:Quark;font-size:24px;}
 .nav_bar_header_alt button:hover{background:rgba(0,0,0,0.4);}
-.scroll_box {z-index:9999;width:96px;height:96px;background:#3498db;position:fixed;left:92%;top:80%;float:right;display:none;}
+.scroll_box {z-index:9999;width:96px;height:96px;background:#3498db;position:fixed;left:92%;top:80%;float:right;display:none;
+             background-image:url(Images/arrow_up.png);background-repeat:no-repeat;background-size:contain;border-radius:2px;box-shadow:rgba(0,0,0,0.5) 0px 0px
+             7px;opacity:0.5;}
+.scroll_box:hover{opacity:1; }
