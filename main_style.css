@@ -191,9 +191,23 @@ button:hover{
                     color:white;font-family:quark;font-size:48px;}
 .content_contatiner p,h1,h2,h3,h4,h5,h6{margin:10px}
 .nav_bar_header_alt h1{margin:0px;}
-.nav_bar_header_alt button{width:150;height:75;margin:0px;border:1px solid #ffffff;background:rgba(0,0,0,0);border-radius:15;color:white;font-family:Quark;font-size:24px;}
+.nav_bar_header_alt button{width:300;height:75;margin:0px;border:1px solid #ffffff;background:rgba(0,0,0,0);border-radius:15;color:white;font-family:Quark;font-size:24px;}
 .nav_bar_header_alt button:hover{background:rgba(0,0,0,0.4);}
 .scroll_box {z-index:9999;width:96px;height:96px;background:#3498db;position:fixed;left:92%;top:80%;float:right;display:none;
              background-image:url(Images/arrow_up.png);background-repeat:no-repeat;background-size:contain;border-radius:2px;box-shadow:rgba(0,0,0,0.5) 0px 0px
              7px;opacity:0.5;}
 .scroll_box:hover{opacity:1; }
+
+#loading_bar {
+    width:300px;
+    height:16px;
+    background-color:#444;
+    border-radius:15px; 
+}
+
+#loading_bar_inner {
+    height:100%;
+    border-radius:15px; 
+    box-shadow:cyan 0px 0px 7px; 
+    background:cyan;
+}
