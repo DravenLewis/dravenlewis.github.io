@@ -1,0 +1,40 @@
+body{
+    
+    font-family:Quark;
+}
+
+
+
+#content_container_v {
+   margin-top: 30px;
+}
+
+#tb_1 {
+    width:16px;
+    height:16px;
+    background:#00FF00; 
+    border-radius:5px;
+    box-shadow:#00FF00 0px 0px 9px; 
+}
+
+#tb_2 {
+    width:16px;
+    height:16px;
+    background:#FF0000; 
+    border-radius:5px;
+    box-shadow:#FF0000 0px 0px 9px; 
+}
+
+#tb_3 {
+    width:16px;
+    height:16px;
+    background:cyan; 
+    border-radius:5px;
+    box-shadow:cyan 0px 0px 9px; 
+}
+
+ol{
+    list-style:none; 
+}
+
+
