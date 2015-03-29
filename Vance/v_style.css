@@ -48,3 +48,15 @@ ol{
     box-shadow:white 0px 0px 9px; 
 
 }
+
+#update_close {
+    width:10px;
+    height:10px;
+    background:url("../Images/Gliphs/closebutton_alt.png");
+    background-size:cover;
+    
+}
+
+.update {
+    margin:5px;
+}
