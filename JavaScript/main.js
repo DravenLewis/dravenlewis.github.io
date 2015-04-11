@@ -1,6 +1,13 @@
-$(document).ready(function(){
+$(document).ready(main);
 	
-	//Check to see if the window is top if not then display button
+	
+    
+
+
+function main(){
+
+    
+    //Check to see if the window is top if not then display button
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 100) {
 			$('.scroll_box').fadeIn();
@@ -42,7 +49,22 @@ if(getInternetExplorerVersion() !== -1){
 }
     
     
+    $('.menuOpen').click(function() {
+        $('.menu').animate({
+            left: "0px"
+        }, 200);
+        $('.menuClose').animate({
+            left: "0px"
+        }, 200);
+     });
+    $('.menuClose').click(function() {
+        $('.menu').animate({
+            left: "-256px"
+        }, 200);
+        $('.menuClose').animate({
+            left: "-256px"
+        }, 200);
+     });
     
     
-	
-});
+}

@@ -7,20 +7,38 @@
         <meta http-equiv="X-UA-Compatible" content="IE=8"/>
     </head>
     <body>
+        <div class = "menu">
+            <div class = "menuClose" id = "menuButton"></div>
+            <div class = "menuOption"><h1>MENU</h1></div>
+            <!---->
+            <div class = "menuOption"><a href="http://dravenlewis.github.io"><h1>Home</h1></a>
+            </div>
+            <div class = "menuOption"><a href="http://dravenlewis.github.io/about"><h1>About</h1></a>
+            </div>
+            <div class = "menuOption"><a href="http://dravenlewis.github.io/projectst"><h1>Projects</h1>
+            </a></div>
+            <center>&copy; 2015 Infinite Strike</center>
+        </div>
+        
+        
         <div class = "nav_bar">
-            <!-- Lets center the text container-->
             <center>
                 <h1 class = "nav_bar_head">Draven Lewis</h1>
             </center>
+            <div class = "menu"></div>
         </div>
+        
+        
         <div class = nav_bar_links>
-            <center style = "margin-left:-25px;">
+            <!--<center style = "margin-left:-25px;">
                 <tr>
                     <td><a href="http://dravenlewis.github.io">Home</a></td>
                     <td><a href="http://dravenlewis.github.io/about">About</a></td>
                     <td><a href="http://dravenlewis.github.io/projectst">Projects</a></td>
                 </tr>
-            </center>
+            </center>-->
+            <div class = "menuOpen" id = "menuButton">
+            </div>
         </div>
         <break/>
         
@@ -46,16 +64,13 @@
             <div class = "content_contatiner" style="background:url('Images/footer_lodyas.png');">
                 <center><div style="z-index:1;float:left;margin-left:37%;">
                     <table>
-                        
                         <tr>
                             <td><center><h1>My Learning Status</h1></center></td>
                         </tr>
-                        
                         <tr>
                             <td>
                                 <div id = "loading_bar">
                                    <div id = "loading_bar_inner" style="width:75px;">
-                                       
                                    </div> 
                                 </div>
                             </td>

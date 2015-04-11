@@ -242,3 +242,19 @@ button:hover{
     left:0;
     top:0;
 }
+
+#menuButton {
+    width:89px;
+    height:89px;
+    background-color:#333; 
+    background-image:url(Images/Gliphs/glyph-about.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    position:fixed;
+    top:0;
+    border:1px solid #222;
+}
+#menuButton:hover{
+    background-color:#555; 
+}
