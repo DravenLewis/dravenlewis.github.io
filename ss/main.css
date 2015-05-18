@@ -1,0 +1,11 @@
+body{background-image:url(../Img/footer_lodyas.png);color:#fff;font-family:Arial;}
+.navbar .navbar-default{background:#fff;border-radius:0px;border:1px solid #fff;margin:0px; 
+                        position:fixed;top:0; left:0;width:100%;z-index:5;}
+.navbar > ol{list-style:none;}
+.navbar li{display:inline;}
+.footer{width:100%;height:100px;background:url("../Img/BlackDenimBack.jpg");color:#fff;}
+.mainContent {background:#fff;width:100%;min-height:500px;height:auto;}
+.jumbotron{background-image:url("../Img/Background.jpg");height:200px; color:#fff;
+           background-repeat:no-repeat; background-size:auto;background-position:top; }
+.jumbotron h1{color:#fff;}
+.update-text {width:600px;font-family:Arial;}
