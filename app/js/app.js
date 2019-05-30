@@ -1,0 +1,169 @@
+var nav_bar_track_scroll = false;
+var dev = true;
+
+// Window handlers
+window.onresize = doOnOrientationChange;
+
+// JQuery Handlers
+$(document).ready(main);
+
+// On document ready
+function main(e){
+    makeInitialChanges();
+    makeMobileChanges(isMobile());
+    createEventListenters(); // call this to create event listeners
+
+    populateProjectList();
+
+}
+
+function makeInitialChanges(){
+    if(window.pageYOffset > 5){$(".is-nav").addClass("w3-black");}
+    $(".age").append(new Date().getFullYear() - 1999);
+    if(dev){
+        new ISNotification("#FFFF00","This project is in progress, and may not be fully functioning. <span id = 'dismiss' style = 'cursor:pointer;font-weight:bold;textDecoration:underlined;'>Dismiss</span>",-1,BOTTOM).show();
+    }
+}
+
+function createEventListenters(){
+        window.onscroll = function(){
+            var yOffset = window.pageYOffset;
+            if(yOffset > 5){
+                $(".is-nav").addClass("w3-black");
+                $(".is-landing-scroll").hide();
+            }else{
+                $(".is-nav").removeClass("w3-black");
+                $(".is-landing-scroll").show();
+            }
+        };
+        $(".is-landing-scroll").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#content-begin").offset().top
+            }, 500);
+        });
+
+        $(".is-nav-thumb").click(function(){
+            if(isMobile()){
+                nav_bar_track_scroll = !nav_bar_track_scroll;
+                if(nav_bar_track_scroll){
+                    $(".is-nav-btn-group").css({'height':'100%'});
+                    $(".is-nav-btn-group").css({'background':'black'});
+                    if(window.pageYOffset <= 5){
+                        $(".is-nav").css({'background':'black'});
+                    }
+                }else{
+                    $(".is-nav-btn-group").css({'background':'rgba(0,0,0,0)'});
+                }
+
+                $(".is-nav-btn-group").slideToggle(500,function(){
+                    if(!nav_bar_track_scroll){
+                        if(window.pageYOffset <= 5){
+                            $(".is-nav").css({'background':'rgba(0,0,0,0)'});
+                        }
+                    }
+                });
+            }
+        });
+
+        $(".ic3").click(function(){
+            createMessageBox("The IC3 certification is a global benchmark for basic computer literacy, including operating systems, hardware, software, and networks. The test is administered by Certiport® Accredited by CompITA <span style = \"font-style:italic;font-size:10px;\">  - Wikipedia</span>","IC3 Certification")
+        });
+        $(".mta").click(function(){
+            createMessageBox("Microsoft Technology Associate exams provide professional based certifications on Microsoft products and they provide the fundamentals for Databases, <span style = \"font-style:oblique;\">Development<span> and IT Infrastructure. MTA certification are offered as part of the Microsoft Certified Professional program.<span style = \"font-style:italic;font-size:10px;\">  - Wikipedia</span>","MTA Certification");
+        });
+}
+
+function makeMobileChanges(isMobile){
+    if(isMobile){
+        $(".is-nav-btn-group").hide();
+        if($(window).width() > $(window).height()){
+            $(".is-landing-inner").css({"margin-top":"10%"});
+        }else{
+            $(".is-landing-inner").css({"margin-top":"40%"});
+        }
+        $(".is-landing-header").css({"font-size":"18px"});
+        $(".is-projects-container").css({"width":"200px","height":"325px"});
+        $(".is-projects").addClass("is-projects-mobile");
+        $(".certification-container ").addClass("is-projects-mobile");
+        $(".is-message-box").addClass("ismb-m");
+        $(".is-projects").css({'height':'400px'});
+
+        $(".is-nav-item").click(function(){
+            $(".is-nav-btn-group").slideToggle(500,function(){
+                if(!nav_bar_track_scroll){
+                    if(window.pageYOffset <= 5){
+                        $(".is-nav").css({'background':'rgba(0,0,0,0)'});
+                    }
+                }
+            });
+        });
+    }else{
+        // changes to be made to mobile widgets if not mobile.
+        $(".is-nav-thumb").hide();
+        $(".is-projects-sr").hide();
+        $(".is-projects-sl").hide();
+    }
+}
+
+function isMobile(){
+    if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function doOnOrientationChange(){
+    console.log("change");
+    makeMobileChanges(isMobile());
+}
+
+function populateProjectList(){
+    var request = new XMLHttpRequest();
+    request.open("GET","./app/data/projects.lst",true);
+    request.onreadystatechange = function(){
+        if (request.readyState == 4 && request.status == 200){
+            var dli = new DataListInterface(request.responseText);
+            var entries = [];
+            entries = dli.processList();
+            console.log("Entry Size: " + entries.length);
+            console.log(entries);
+
+            //=========================================
+
+            for(var i = 0; i < entries.length; i++){
+                var entry = entries[i];
+                var title = entry['title'];
+                var img = entry['img'];
+                var desc = entry['desc'];
+                var elementPrototype = "<div class = \"is-projects-container w3-container w3-mobile\"> \
+                <h3>"+title+"</h3> <img class = \"is-pc-img\" src = \""+img+"\"/> \
+                <p>"+desc+"</p></div>";
+
+                $(".is-projects").append(elementPrototype);
+            }
+        }
+    }
+    request.send();
+}
+
+function createMessageBox(message,title = "Alert!"){
+    var template = "\
+        <div class = \"is-shadowbox\"> \
+            <div class = \"is-message-box "+(isMobile() ? "ismb-m" : "")+"\"> \
+            <div class = \"w3-container w3-blue\"><h3>"+title+"</h3></div> \
+                <h3 class = \"is-message-box-message\">"+message+"</h3> \
+                <button class = \"is-message-box-ok\">Ok</button> \
+            </div> \
+        </div>";
+
+    $("body").append(template);
+    if(isMobile()){
+        $("body").css({"overflow":"hidden"});
+    }
+
+    $(".is-message-box-ok").click(function(){
+        $(".is-shadowbox").remove();
+        $("body").css({"overflow":"visible"});
+    });
+}

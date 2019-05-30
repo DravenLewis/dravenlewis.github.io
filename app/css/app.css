@@ -1,0 +1,327 @@
+/* Meta Code
+--------------------------------------------------------------------*/
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    
+}
+
+/* // Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    
+}
+
+@font-face{
+    font-family: Ageo;
+    src: url("../fnt/Ageo.otf") format("opentype");
+}
+/* Element Code
+--------------------------------------------------------------------*/
+html , body{
+    background: #c3c3c3;
+    width: 100%;
+    height: 100%; 
+
+    font-family: Ageo !important;
+}
+
+hr{
+    width:85%;
+    height:3px;
+    background:darkgray;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* ID Code
+--------------------------------------------------------------------*/
+
+#content-header{
+    font-family: Arial, Helvetica, sans-serif;
+    width:100%;
+    height: auto;
+    min-height: 400px;
+    background-color: white;
+    margin: auto;
+    padding: 0px;
+}
+
+#content-header p,h1,h2,h3,h4,h5,h6{
+    padding-left: 25px;
+}
+
+#content-footer{
+    font-family: Arial, Helvetica, sans-serif;
+    width:100%;
+    height: auto;
+    background-color: rgb(61, 61, 61);
+    color:white;
+    margin: auto;
+    padding: 0px;
+}
+
+#content-footer p,h1,h2,h3,h4,h5,h6{
+    padding-left: 25px;
+}
+
+#content-footer-text{
+    padding: 10px;
+    float:right;
+}
+
+/* Class Code
+--------------------------------------------------------------------*/
+
+.ic3{
+    background:url("../img/Certification/IC3 Flat.png") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.mta{
+    background: url("../img/Certification/MTA Flat.jpg") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.is-nav {
+    color:white;
+    height: auto;
+}
+
+.is-nav-btn{
+    float:right;
+}
+
+.is-nav-btn-group{
+    position: relative;
+    top:10px;
+    float:right;
+    padding: 5px;
+    padding-bottom: 30px;
+}
+
+.is-nav-btn-group a{
+    margin: 5px;
+    padding: 5px; 
+}
+
+.is-nav-thumb{
+    width: 48px;
+    height: 48px;
+    background-image: url("../img/UI/img_thumb.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    float:right;
+    margin-top: 20px;
+}
+
+.is-landing{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/landing-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+.is-mask {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    margin: 0px;
+    padding: 0px;
+}
+
+.is-landing-inner {
+    width: 60%;
+    max-height: 60%;
+    margin: auto;
+    margin-top: 20%;
+    overflow: hidden;
+}
+
+.is-landing-scroll {
+    background-image: url(../img/UI/img_arrow_down.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 64px;
+    height: 64px;
+    margin:auto;
+    cursor: pointer;
+}
+
+.is-landing-header{
+    color: white;
+    font-weight: bold;
+    border-bottom: 3px solid white;
+    text-align: center;
+}
+
+.is-landing-content{
+    color: white;
+    font-size:18pt;
+    word-wrap: break-word;
+}
+
+.is-section-header{
+    margin-left: 32px;
+}
+
+.is-projects{
+    width:100%;
+    height: auto;
+    min-height: 400px;
+    background-color: white;
+    margin: auto;
+    padding: 0px;
+}
+
+.is-projects-mobile{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.is-projects::-webkit-scrollbar {
+     width: 0 !important ;
+}
+
+.is-projects-container{
+    background-color: white;
+    box-shadow: 0px 0px 2px;
+    border-radius: 3px;
+    display: inline-block;
+    width: 250px /*275*/;
+    height: 300px /*325*/;
+    margin: 30px;
+    vertical-align: top;
+}
+
+.is-projects-sl{
+    width: 64px;
+    height: 64px;
+    top:130%;
+    position: absolute;
+    background-color: blue;
+    float:right;
+}
+
+.is-projects-sr{
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    left: 83%;
+    top: 130%;
+    background-color: red;
+    float:left;
+}
+
+.is-skills{
+    width:100%;
+    height: auto;
+    min-height: 400px;
+    background-color: white;
+    margin: auto;
+    padding: 0px;
+}
+
+.is-pc-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+    max-height: 30%;
+}
+
+.certification{
+    width: 300px;
+    height: 200px;
+    background-image: url("../img/Certification/default-flat.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin:15px;
+    display: inline-block;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.certification:hover{
+    border:1px solid #3498db;
+}
+
+.certification h3{
+    background: rgba(0,0,0,0.5);
+    position: relative;
+    top:73%;
+    color:white;
+    padding: 4px;
+}
+
+.is-shadowbox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0px;
+    left:0px;
+    background: rgba(0,0,0,0.8);
+    float:left;
+    z-index: 1000;
+}
+
+.is-message-box{
+    width: 500px;
+    min-height: 300px;
+    height: auto;
+    background: white;
+    margin: auto;
+    margin-top:9%; 
+}
+
+.is-message-box-ok{
+    width: 95%;
+    height: 64px;
+    color:white;
+    border-radius: 3px;
+    background: #2196F3;
+    border:1px solid #3498db;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.is-message-box-message{
+    padding-left: 25px;
+    padding-top:15px; 
+    word-wrap: break-word;
+}
+
+.ismb-m{
+    width: 100% !important;
+    height: 99% !important;
+    margin-top: 0% !important;
+}
+
+.ismb-m .is-message-box-ok{
+    position: relative !important;
+    top: 85% !important;
+}

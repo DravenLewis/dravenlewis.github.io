@@ -1,75 +1,84 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <link href="ss/main.css" rel = "stylesheet" />
-        <link href="bs/css/bootstrap-theme.css" rel = "stylesheet"/>
-        <link href="bs/css/bootstrap.css" rel = "stylesheet"/>
-        <title>Draven Lewis - Home</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Draven Lewis </title>
+        
+        <!-- Java Script -->
+        <script type="text/javascript" src="common/jquery/JQuery.js"></script>
+        <script type="text/javascript" src="./common/infinitestrike/DataListInterface.js"></script>
+        <script type="text/javascript" src="./common/infinitestrike/ISNotification.js"></script>
+        
+        <script type="text/javascript" src="app/js/app.js"></script>
+        
+        <!-- Style Sheets -->
+        <link type="text/css" rel="stylesheet" href="common/W3-CSS/w3.css"/>
+        <link type="text/css" rel="stylesheet" href="app/css/app.css"/>
     </head>
     <body>
-        <div class = "navbar">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <ul class = "nav navbar-nav">
-                        <li role = "presentation"><a class="navbar-brand" href="http://dravenlewis.github.io">Draven Lewis</a></li>
-                        <li role = "presentation"  class = "active"><a href = "http://dravenlewis.github.io">Home</a></li>
-                        <li role = "presentation"><a href = "http://dravenlewis.github.io/project">Projects</a></li>
-                        <li role = "presentation"><a href = "http://dravenlewis.github.io/about">About</a></li>
-                    </ul>
-                </div>
-            </nav>
+        <div class = "w3-bar w3-container w3-mobile w3-large w3-top is-nav">
+            <h2 class="w3-bar-item is-header"> Draven Lewis </h2>
+            <div class = "is-nav-thumb"></div>
+            <div class="is-nav-btn-group">
+            	<a href="#land-hire" class = "is-nav-item w3-mobile w3-bar-item w3-button w3-right is-nav-btn w3-hover-white w3-hover-text-black w3-blue">hire me</a>
+            	<a href="#land-abot" class = "is-nav-item w3-mobile w3-bar-item w3-button w3-right is-nav-btn w3-hover-white w3-hover-text-gray">about</a>
+            	<a href="#land-port" class = "is-nav-item w3-mobile w3-bar-item w3-button w3-right is-nav-btn w3-hover-white w3-hover-text-gray">portfolio</a>
+            	<a href="#land-skls" class = "is-nav-item w3-mobile w3-bar-item w3-button w3-right is-nav-btn w3-hover-white w3-hover-text-gray">skills</a>
+            	<a href="#land-proj" class = "is-nav-item w3-mobile w3-bar-item w3-button w3-right is-nav-btn w3-hover-white w3-hover-text-gray">projects</a>
+        	</div>
         </div>
-        <div class = "mainContent">
-            <div class="jumbotron">
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h1 class="panel-title">
-                        <span style = "font-size:48px;color:#111;" class="glyphicon glyphicon-info-sign" aria-hidden="true">
-                        <span style = "font-family:Arial;">Website Updates.</span>
-                    </h1>
+        
+        <div class = "w3-mobile w3-container is-landing">
+            <div class = "is-mask w3-container w3-mobile">
+                <div class = "is-landing-inner w3-mobile w3-container">
+                	<h4 class = "is-landing-header">Front End / Back End / Web / Game / App</h4>
+                	<p class = "is-landing-content">Hello! My Name is Draven Lewis, and i am a free-lance web, app, and game developer!</p>
                 </div>
-                <div class="panel-body">
-                    <div class = "update-text">
-                        <h1>Website Redesign<h5>(5/17/15)</h5></h1>
-                        <p>I have worked my butt off (not really, only like 2 days of work) on rewriting the 
-                           site and getting it to look a lot better, the site is currently built with bootstrap
-                           and now has a nicer look and feel!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h1 class="panel-title">
-                        <span style = "font-size:48px;color:#111;" class="glyphicon glyphicon-flash" aria-hidden="true">
-                        <span style = "font-family:Arial;">Project Showcase.</span>
-                    </h1>
-                </div>
-                <div class="panel-body">
-                    <div class = "update-text">
-                        <h1>
-                            <span style = "color:#111;" class="glyphicon glyphicon-remove-sign" aria-hidden="true">
-                            </span>
-                            Nothing To Show 
-                        </h1>
-                        <p>This Area is a bit empty, should be filled up soon!</p>
-                    </div>
-                </div>
+                <div class = "is-landing-scroll"></div>
             </div>
         </div>
-        <div class = "footer">
-            <div class="rows">
-                <div class = "col-md-3">
-                    <a role = "presentation" class="navbar-brand" href = "http://infintestrikeltd.github.io">
-                        <span style="color:#fff;font-size:10px;">Powered By</span>
-                        <img class = "logo" src = "Img/logo-alt.png" height="32px">
-                    </a>
-                </div>
-                <div class = "col-md-3" style="width:auto;">
-                    <h4 style="padding-top:30px;">This website is part of the Infinite Strike Network| 
-                        <span style="font-size:12;">Visit Infinite Strike</span>
-                    </h4>
-                </div>
+        
+        <div id = "content-begin" class = "w3-container w3-content w3-mobile">
+        
+        </div>
+        <h1 class = "is-section-header" id = "land-proj" >Projects</h1>
+        <div class = "is-projects w3-container w3-mobile"></div>
+        <h1 class = "is-section-header" id = "land-port" >Portfolio</h1>
+        <div class = "w3-container w3-mobile" id = "content-header"></div>
+        <h1 class = "is-section-header" id = "land-skls" >Skills</h1>
+        <div class = "is-skills w3-container w3-mobile">
+            <div class = "w3-container w3-gray"><h3>Certifications</h3></div>
+            <div class = "certification-container w3-container" style = "padding: 0px;">
+                <div class = "certification ic3"><h3>IC3 GS3 Certification</h3></div>
+                <div class = "certification ic3"><h3>IC3 GS4 Certification</h3></div>
+                <div class = "certification mta"><h3>Microsoft MTA C#</h3></div>
+                <div class = "certification mta"><h3>Microsoft MTA HTML5</h3></div>
+                <div class = "certification"><h3>High School Diploma</h3></div>
             </div>
+            <hr/>
+            <div class = "w3-container w3-gray"><h3>Non-Certified Skills</h3></div>
+            <ul>
+                <li><h4>Java Programming</h4></li>
+                <li><h4>Android App Development</h4></li>
+                <li><h4>Web App Development</h4></li>
+                <li><h4>Back End App Development</h4></li>
+                <li><h4>Video Game Development</h4></li>
+            </ul>
+        </div>
+        <h1 class = "is-section-header" id = "land-abot" >About</h1>
+        <div class = "w3-container w3-mobile" id = "content-header">
+            <h1>Hello :)</h1>
+            <h4 style = "word-wrap: break-word;">I am a <span class = "age"></span> year old, self taught developer. With that aside, id like to say that im 
+            more than just a developer. I enjoy many things! I'm a HUGE nerd and I love video games! The Legend of Zelda is one of my favorites. I love learning!
+            Math, Science, and a lot of useless trivia. So i can't wait to show you what i got, and even maybe work for you!</h4>
+            <br/><br/>
+            <h4 style = "font-style:oblique;"> - Your Friend, Draven Lewis.</h4>
+        </div>
+        <h1 class = "is-section-header" id = "land-hire" >Hire Me!</h1>
+        <div class = "w3-container w3-mobile" id = "content-header"></div>
+        <div class = "w3-container w3-mobile" id = "content-footer">
+            <p id = "content-footer-text"> Made with love by Draven of <img src = "app/img/lowestres-logo.png"/> </p>
         </div>
     </body>
 </html>

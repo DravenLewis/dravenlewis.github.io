@@ -1,0 +1,29 @@
+#############################################################################################################################
+#
+# Projects List
+# Author: Draven Lewis 2019
+#
+#	Small Table for the project list on the front page.
+#
+#
+#############################################################################################################################
+
+Define
+	default_image 		-> https://cdn.iconscout.com/icon/free/png-256/octocat-5-896384.png
+	infinite_db_url 	-> https://github.com/DravenLewis/InfiniteDB
+	personal_site_url 	-> https://github.com/DravenLewis/dravenlewis.github.io
+EndDefine
+
+Entry
+	title 	-> InfiniteDB
+	img 	-> $default_image
+	desc 	-> <p><a href = "$infinite_db_url">InfiniteDB</a><br/><br/> A from the ground up DB</p>
+EndEntry
+
+Entry
+	title 	-> Personal Website
+	img 	-> $default_image
+	desc 	-> <p><a href = "$personal_site_url">Personal Website</a><br/><br/>Source for this website!</p>
+EndEntry
+
+
