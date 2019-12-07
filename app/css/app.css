@@ -50,7 +50,7 @@ hr{
     font-family: Arial, Helvetica, sans-serif;
     width:100%;
     height: auto;
-    min-height: 400px;
+    min-height: 200px;
     background-color: white;
     margin: auto;
     padding: 0px;
@@ -209,10 +209,20 @@ hr{
     box-shadow: 0px 0px 2px;
     border-radius: 3px;
     display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
     width: 250px /*275*/;
     height: 300px /*325*/;
     margin: 30px;
     vertical-align: top;
+    text-align: center;
+}
+
+.is-projects-container h3{
+    padding: 0px !important;
+}
+
+.is-projects-container img{
+    height: 64px;
 }
 
 .is-projects-sl{
@@ -324,4 +334,11 @@ hr{
 .ismb-m .is-message-box-ok{
     position: relative !important;
     top: 85% !important;
+}
+
+.is-hire-btn{
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px !important;
 }

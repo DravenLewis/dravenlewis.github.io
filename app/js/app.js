@@ -10,11 +10,11 @@ $(document).ready(main);
 // On document ready
 function main(e){
     makeInitialChanges();
-    makeMobileChanges(isMobile());
+    
     createEventListenters(); // call this to create event listeners
 
     populateProjectList();
-
+    makeMobileChanges(isMobile());
 }
 
 function makeInitialChanges(){
@@ -97,6 +97,8 @@ function makeMobileChanges(isMobile){
                 }
             });
         });
+
+        $(".desk-github").remove();
     }else{
         // changes to be made to mobile widgets if not mobile.
         $(".is-nav-thumb").hide();
@@ -119,7 +121,7 @@ function doOnOrientationChange(){
 }
 
 function populateProjectList(){
-    var request = new XMLHttpRequest();
+    /*var request = new XMLHttpRequest();
     request.open("GET","./app/data/projects.lst",true);
     request.onreadystatechange = function(){
         if (request.readyState == 4 && request.status == 200){
@@ -144,7 +146,33 @@ function populateProjectList(){
             }
         }
     }
-    request.send();
+    request.send();*/
+
+    // ON GITHUB
+    $(".is-projects").append("<h1 class = \"desk-github\">From Github</h1>");
+    var lister = new GitHubLister("dravenlewis");
+    lister.list((data, message, error) => {
+        if(!error){
+            for(var i = 0; i < data.length; i++){
+
+                console.log(data[i]);
+
+                var name = data[i].name || "No Name Found";
+                var desc = data[i].desc || "No Description Found";
+                var lang = data[i].lang || "None";
+
+                var elementPrototype = "<div class = \"is-projects-container w3-container w3-mobile\"> \
+                <a href = "+data[i].url+"><h3>"+name+"</h3></a> <img src = \"https://cdn.iconscout.com/icon/free/png-256/octocat-5-896384.png\">\
+                <p>"+desc+"</p><br/><em><p>Language: "+lang+"</p></em></div>";
+
+                if(!data[i].fork){
+                    $(".is-projects").append(elementPrototype);
+                }
+            }
+        }else{
+            console.log(message);
+        }
+    });
 }
 
 function createMessageBox(message,title = "Alert!"){

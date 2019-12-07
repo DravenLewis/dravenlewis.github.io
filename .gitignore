@@ -45,3 +45,6 @@ Temporary Items
 # Unwanted Files
 *.7z
 *.php
+
+# Application Development Files
+app.js
