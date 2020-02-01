@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../common/W3-CSS/w3.css">
+    <link rel="stylesheet" href="hire.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class = "w3-container w3-blue w3-bar">
+        <h1 class = "w3-bar-item w3-mobile">Lets Get Started!</h1>
+        <div class = "w3-container w3-bar-item w3-right is-nav-btn-group">
+            <a href="../../index.html" class = "is-nav-item w3-mobile w3-bar-item w3-button w3-right is-nav-btn w3-hover-white w3-hover-text-gray">home</a>
+        </div>
+    </div>
+    <div class = "w3-container w3-white is-hire-form">
+        <form>
+            <h3 class = "w3-blue section-header">What can I do for you?</h3>
+            <input type="radio" name="service" value="app"/> Make me an APP! <br/>
+            <input type="radio" name="service" value="site"/> Make me a WEBSITE! <br/>
+            <input type="radio" name="service" value="pc"/> Repair my PC! <br/><br/>
+            <h3 class = "w3-blue section-header">Tell me a little bit about what you need.</h3>
+            <textarea required name="description" cols="80">
+
+            </textarea>
+            <h3 class = "w3-blue section-header">Tell me about you?</h3>
+            
+            <label>First Name</label>
+            <input required class = "w3-input is-person" type="text" name = "firstname"/>
+            <label>Last Name</label>
+            <input required  class = "w3-input is-person" type="text" name = "lastname"/>
+            <label>Email Address</label>
+            <input required  class = "w3-input is-person" type="email" name = "email"/>
+            <br/><br/>
+            <input required type="checkbox" name="tosagree"/>
+            <label>By Clicking this, you agree to my <a href = "../../tos.html">Terms and Conditions</a></label>
+            <br/><br/>
+            <input type = "submit" class = "w3-button w3-green" value="Get in Touch"/>
+            <br/><br/>
+        </form>
+    </div>
+    <div class = "w3-container w3-mobile" id = "content-footer">
+        <p id = "content-footer-text"> Made with love by Draven of <a href = "http://infinitestrikeltd.github.io/"><img src = "../../app/img/lowestres-logo.png"/></a> </p>
+    </div>
+    <div class = "w3-container w3-mobile w3-black">
+        <p><a href="../../tos.html">Terms and Conditions</a> | <a href="../../privacy.html">Privacy Policy</a></p>
+    </div>
+</body>
+</html>
