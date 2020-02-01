@@ -1,5 +1,5 @@
 var nav_bar_track_scroll = false;
-var dev = true;
+var dev = false;
 
 // Window handlers
 window.onresize = doOnOrientationChange;
@@ -22,6 +22,8 @@ function makeInitialChanges(){
     $(".age").append(new Date().getFullYear() - 1999);
     if(dev){
         new ISNotification("#FFFF00","This project is in progress, and may not be fully functioning. <span id = 'dismiss' style = 'cursor:pointer;font-weight:bold;textDecoration:underlined;'>Dismiss</span>",-1,BOTTOM).show();
+    }else{
+        new ISNotification("#FFFFFF","This site does not collect cookies. <span id = 'dismiss' style = 'cursor:pointer;font-weight:bold;textDecoration:underlined;'>Dismiss</span>",-1,BOTTOM).show();
     }
 }
 
