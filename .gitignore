@@ -48,3 +48,7 @@ Temporary Items
 
 # Application Development Files
 app.js
+run.sh
+
+#visual stuido code files
+.vscode/

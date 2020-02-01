@@ -121,33 +121,6 @@ function doOnOrientationChange(){
 }
 
 function populateProjectList(){
-    /*var request = new XMLHttpRequest();
-    request.open("GET","./app/data/projects.lst",true);
-    request.onreadystatechange = function(){
-        if (request.readyState == 4 && request.status == 200){
-            var dli = new DataListInterface(request.responseText);
-            var entries = [];
-            entries = dli.processList();
-            console.log("Entry Size: " + entries.length);
-            console.log(entries);
-
-            //=========================================
-
-            for(var i = 0; i < entries.length; i++){
-                var entry = entries[i];
-                var title = entry['title'];
-                var img = entry['img'];
-                var desc = entry['desc'];
-                var elementPrototype = "<div class = \"is-projects-container w3-container w3-mobile\"> \
-                <h3>"+title+"</h3> <img class = \"is-pc-img\" src = \""+img+"\"/> \
-                <p>"+desc+"</p></div>";
-
-                $(".is-projects").append(elementPrototype);
-            }
-        }
-    }
-    request.send();*/
-
     // ON GITHUB
     $(".is-projects").append("<h1 class = \"desk-github\">From Github</h1>");
     var lister = new GitHubLister("dravenlewis");

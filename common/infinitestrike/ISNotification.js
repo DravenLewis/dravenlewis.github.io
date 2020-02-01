@@ -31,7 +31,7 @@ function ISNotification(color, text, length,BoundingBox = DEFAULT){
             $(".npt-inernal-"+instance_index+"").css({"padding-bottom":"1px"});
             $(".npt-inernal-"+instance_index+"").find('p').css({"padding":"10px"});
             $(".npt-inernal-"+instance_index+"").find('#dismiss').click(function(){
-                $(".npt-inernal-"+instance_index+"").slideToggle();
+                $(".npt-inernal-"+instance_index+"").fadeToggle();
             });
 
             if(this.length >= 0){

@@ -197,7 +197,7 @@ hr{
 .is-projects-mobile{
     overflow-x: scroll;
     overflow-y: hidden;
-    white-space: nowrap;
+    white-space: pre-wrap;
 }
 
 .is-projects::-webkit-scrollbar {
