@@ -70,7 +70,7 @@ html,body{
     height: 150px;
 }
 
-.is-hire-form form input[type="submit"]{
+.is-hire-form form input[type="button"]{
     width: 95%;
 }
 
