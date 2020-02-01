@@ -16,11 +16,14 @@
             type:'post',
             data:$('#form-965382751193076870').serialize(),
             success:function(dat){
-                var json = JSON.parse(dat);
+                var startIndex = dat.indexOf("<div id='response'>") + 19;
+                var endIndex = dat.indexOf("</div></body></html>");
+                console.log(dat.substring(startIndex,endIndex));
+                var json = JSON.parse(dat.substring(startIndex,endIndex));
                 if(json.success){
-                    new ISNotification("#00FF00",json.data.message, SECOND * 3, BOTTOM);
+                    new ISNotification("#4CAF50",json.data.message, SECOND * 3, BOTTOM).show();
                 }else{
-                    new ISNotification("#FF0000","An Error Occured",SECOND * 3,BOTTOM);
+                    new ISNotification("#FF0000","An Error Occured",SECOND * 3,BOTTOM).show();
                 }
             }
         });
