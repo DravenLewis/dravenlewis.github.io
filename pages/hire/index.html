@@ -22,6 +22,7 @@
                 var json = JSON.parse(dat.substring(startIndex,endIndex));
                 if(json.success){
                     new ISNotification("#4CAF50",json.data.message, SECOND * 3, BOTTOM).show();
+                    console.log($('#form-965382751193076870').serialize());
                 }else{
                     new ISNotification("#FF0000","An Error Occured",SECOND * 3,BOTTOM).show();
                 }
@@ -38,33 +39,8 @@
         </div>
     </div>
     <div class = "w3-container w3-white is-hire-form w3-mobile">
-        <form enctype="multipart/form-data" action="https://dravenlewis-form-page.weebly.com/ajax/apps/formSubmitAjax.php" method="POST" id="form-965382751193076870" accept-charset="UTF-8" target="form-965382751193076870-target-1580549299099">
-            <h3 class = "w3-mobile w3-blue section-header">What can I do for you?</h3>
-            <input class = "w3-mobile" type="radio" name="_u529204567976550753" value="app"/> Make me an APP! <br/>
-            <input class = "w3-mobile" type="radio" name="_u529204567976550753" value="site"/> Make me a WEBSITE! <br/>
-            <input class = "w3-mobile" type="radio" name="_u529204567976550753" value="pc"/> Repair my PC! <br/><br/>
-            <h3 class = "w3-mobile w3-blue section-header">Tell me a little bit about what you need.</h3>
-            <textarea class = "w3-mobile" required name="_u285408115533792356" cols="80">
-
-            </textarea>
-            <h3 class = "w3-blue section-header w3-mobile">Tell me about you?</h3>
-            
-            <label class = "w3-mobile">First Name</label>
-            <input required class = "w3-input is-person" type="text" name = "_u623109459978505091"/>
-            <label class = "w3-mobile">Last Name</label>
-            <input required  class = "w3-input w3-mobile is-person" type="text" name = "_u876395492623241433"/>
-            <label class = "w3-mobile">Email Address</label>
-            <input required  class = "w3-input w3-mobile is-person" type="email" name = "_u614228968599271527"/>
-            <br/><br/>
-            <label class = "w3-mobile">By Clicking this, you agree to my <a href = "../../tos.html">Terms and Conditions</a><span><input class = "w3-mobile" required type="checkbox" name="tosagree"/></span></label>
-            <br/><br/>
-            <input type = "button" class = "w3-button w3-mobile w3-green" value="Get in Touch" onclick="SubForm();"/>
-            <br/><br/>
-            <input type="hidden" name="form_version" value="2">
-			<input type="hidden" name="wsite_approved" id="wsite-approved" value="approved">
-			<input type="hidden" name="ucfid" value="965382751193076870">
-			<input type="hidden" name="recaptcha_token">
-        </form>
+        <!--https://dravenlewis-form-page.weebly.com/ajax/apps/formSubmitAjax.php-->
+        <h1>Currently not looking for work!</h1>
     </div>
     <div class = "w3-container w3-mobile" id = "content-footer">
         <p id = "content-footer-text"> Made with love by Draven of <a href = "http://infinitestrikeltd.github.io/"><img src = "../../app/img/lowestres-logo.png"/></a> </p>
