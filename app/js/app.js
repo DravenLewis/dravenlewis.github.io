@@ -91,12 +91,13 @@ function makeMobileChanges(isMobile){
         $(".is-projects").css({'height':'400px'});
 
         $(".is-nav-item").click(function(){
-            $(".is-nav-btn-group").slideToggle(500);
-            if(!nav_bar_track_scroll){
-                if(window.pageYOffset <= 5){
-                    $(".is-nav").css({'background':'rgba(0,0,0,0)'});
+            $(".is-nav-btn-group").slideToggle(500, () => {
+                if(!nav_bar_track_scroll){
+                    if(window.pageYOffset <= 5){
+                        //$(".is-nav").css({'background':'rgba(0,0,0,0)'});
+                    }
                 }
-            }
+            });
         });
 
         $(".desk-github").remove();
