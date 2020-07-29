@@ -131,7 +131,7 @@ function populateProjectList(){
     lister.list((data, message, error) => {
         if(!error){
 
-            $(".is-projects").append("<h3 class = \"desk-github\">From Github</h3>");
+            //$(".is-projects").append("<h3 class = \"desk-github\">From Github</h3>");
 
             for(var i = 0; i < data.length; i++){
 
@@ -147,10 +147,11 @@ function populateProjectList(){
 
                 if(!data[i].fork){
                     $(".is-projects").append(elementPrototype);
+                    $(".loader").remove();
                 }
             }
             //
-            $(".loader").remove();
+
         }else{
             $(".loader").remove();
             $(".is-projects").append("<h1>Error Loading Projects from Github</h1>");
