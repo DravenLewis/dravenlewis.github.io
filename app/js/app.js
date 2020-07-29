@@ -164,7 +164,7 @@ function createMessageBox(message,title = "Alert!"){
     var template = "\
         <div class = \"is-shadowbox\"> \
             <div class = \"is-message-box "+(isMobile() ? "ismb-m" : "")+"\"> \
-            <div class = \"w3-container w3-blue\"><h3>"+title+"</h3></div> \
+            <div class = \"w3-container w3-black\"><h3>"+title+"</h3></div> \
                 <h3 class = \"is-message-box-message\">"+message+"</h3> \
                 <button class = \"is-message-box-ok\">Ok</button> \
             </div> \

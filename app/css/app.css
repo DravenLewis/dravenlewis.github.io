@@ -218,6 +218,10 @@ hr{
     text-align: center;
 }
 
+.is-projects-container:hover{
+    filter: invert(1);
+}
+
 .is-projects-container h3{
     padding: 0px !important;
 }
@@ -314,8 +318,8 @@ hr{
     height: 64px;
     color:white;
     border-radius: 3px;
-    background: #2196F3;
-    border:1px solid #3498db;
+    background: #000;
+    border:1px solid #000000;
     cursor: pointer;
     margin: 10px;
 }
