@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "generated_on": "2020-06-29T00:33:03.786Z",
+    "build_client": "linux",
+    "host_os_type": "Linux"
+  },
+  "personal-website.html": {
+    "title": "Personal Webiste Demo",
+    "desc": "Basic Personal Webiste Demo, for portfolio or advertisment"
+  },
+  "small-business.html": {
+    "title": "Small Business Demo",
+    "desc": "Basic Website demo, for local small Busineses"
+  }
+}

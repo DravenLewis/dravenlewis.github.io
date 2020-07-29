@@ -9,44 +9,26 @@
     <title>Hire Form</title>
     <script src = "../../common/jquery/JQuery.js"></script>
     <script src = "../../common/infinitestrike/ISNotification.js"></script>
-    <script>
-        function SubForm (){
-        $.ajax({
-            url:'https://cors-anywhere.herokuapp.com/https://dravenlewis-form-page.weebly.com/ajax/apps/formSubmitAjax.php',
-            type:'post',
-            data:$('#form-965382751193076870').serialize(),
-            success:function(dat){
-                var startIndex = dat.indexOf("<div id='response'>") + 19;
-                var endIndex = dat.indexOf("</div></body></html>");
-                console.log(dat.substring(startIndex,endIndex));
-                var json = JSON.parse(dat.substring(startIndex,endIndex));
-                if(json.success){
-                    new ISNotification("#4CAF50",json.data.message, SECOND * 3, BOTTOM).show();
-                    console.log($('#form-965382751193076870').serialize());
-                }else{
-                    new ISNotification("#FF0000","An Error Occured",SECOND * 3,BOTTOM).show();
-                }
-            }
-        });
-}
-    </script>
 </head>
 <body>
-    <div class = "w3-container w3-blue w3-bar">
-        <h1 class = "w3-bar-item w3-mobile">Lets Get Started!</h1>
-        <div class = "w3-container w3-bar-item w3-right is-nav-btn-group">
-            <a href="../../index.html" class = "is-nav-item w3-white w3-mobile w3-bar-item w3-button w3-right is-nav-btn w3-hover-white w3-hover-text-gray">home</a>
+    <div class = "w3-bar w3-container w3-mobile w3-white">
+        <h2 class = "w3-left w3-mobile">Talent Portal</h2>
+    </div>
+    <div class = "jumbotron w3-container w3-mobile">
+        <div class = "jumbotron-inner">
+            <div class = "cta">
+                <h2>Web Design Showcase</h2>
+                <hr/>
+                <button class = "w3-button w3-blue w3-mobile">Take a Look</button>
+                <button class = "w3-button w3-white w3-mobile">Contract me</button>
+            </div>
         </div>
     </div>
-    <div class = "w3-container w3-white is-hire-form w3-mobile">
-        <!--https://dravenlewis-form-page.weebly.com/ajax/apps/formSubmitAjax.php-->
-        <h1>Currently not looking for work!</h1>
-    </div>
+
+    <div class = "w3-container content-main"></div>
+
     <div class = "w3-container w3-mobile" id = "content-footer">
         <p id = "content-footer-text"> Made with love by Draven of <a href = "http://infinitestrikeltd.github.io/"><img src = "../../app/img/lowestres-logo.png"/></a> </p>
-    </div>
-    <div class = "w3-container w3-mobile w3-black">
-        <p><a href="../../tos.html">Terms and Conditions</a> | <a href="../../privacy.html">Privacy Policy</a></p>
     </div>
 </body>
 </html>
