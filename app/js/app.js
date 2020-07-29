@@ -89,6 +89,7 @@ function makeMobileChanges(isMobile){
         $(".certification-container ").addClass("is-projects-mobile");
         $(".is-message-box").addClass("ismb-m");
         $(".is-projects").css({'height':'400px'});
+        $("h1").css({'font-size':'24px'});
 
         $(".is-nav-btn-group").click(function(){
             (".is-nav-btn-group").fadeToggle();
@@ -125,10 +126,13 @@ function doOnOrientationChange(){
 
 function populateProjectList(){
     // ON GITHUB
-    $(".is-projects").append("<h1 class = \"desk-github\">From Github</h1>");
+    
     var lister = new GitHubLister("dravenlewis");
     lister.list((data, message, error) => {
         if(!error){
+
+            $(".is-projects").append("<h3 class = \"desk-github\">From Github</h3>");
+
             for(var i = 0; i < data.length; i++){
 
                 console.log(data[i]);
@@ -145,7 +149,11 @@ function populateProjectList(){
                     $(".is-projects").append(elementPrototype);
                 }
             }
+            //
+            $(".loader").remove();
         }else{
+            $(".loader").remove();
+            $(".is-projects").append("<h1>Error Loading Projects from Github</h1>");
             console.log(message);
         }
     });

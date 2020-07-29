@@ -1,0 +1,24 @@
+@keyframes loader{
+    0%{width: 0%;}
+    50%{width:100%;}
+    100%{width:0%;}
+}
+
+
+.loader{
+    margin:auto;
+    padding:0px;
+    width:80%;
+    height:20px;
+    border: 1px solid black;
+    margin-top: 150px;
+}
+
+.loader-inner{
+    margin:0px;
+    background-color: #000000;
+    height:100%;
+    animation-name: loader;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
