@@ -79,6 +79,51 @@ hr{
     float:right;
 }
 
+#java{
+    background: rgb(255,160,0);
+    background: linear-gradient(13deg, rgba(255,160,0,1) 0%, rgba(253,53,45,1) 100%);
+}
+
+#java .img{
+    background-image: url("../img/logos/java.svg");
+}
+
+#android{
+    background: rgb(0,255,6);
+    background: linear-gradient(13deg, rgba(0,255,6,1) 0%, rgba(14,111,13,1) 100%);
+}
+
+#android .img{
+    background-image: url("../img/logos/android.svg");
+}
+
+#web{
+    background: rgb(0,221,255);
+    background: linear-gradient(13deg, rgba(0,221,255,1) 0%, rgba(18,13,111,1) 100%);
+}
+
+#web .img{
+    background-image: url("../img/logos/web.svg");
+}
+
+#server{
+    background: rgb(255,0,0);
+    background: linear-gradient(13deg, rgba(255,0,0,1) 0%, rgba(255,0,149,1) 100%);
+}
+
+#server .img{
+    background-image: url("../img/logos/server.svg");
+}
+
+#game{
+    background: rgb(166,166,166);
+    background: linear-gradient(13deg, rgba(166,166,166,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+#game .img{
+    background-image: url("../img/logos/game.svg");
+}
+
 /* Class Code
 --------------------------------------------------------------------*/
 
@@ -346,4 +391,55 @@ hr{
     margin: 0 auto;
     display: block;
     margin-top: 10px !important;
+}
+
+.is-bubble{
+    border-radius: 5px;
+    width:19%;
+    height:290px;
+    min-width:300px;
+    background: #000000;
+    display: inline-block;
+    margin-left:2px;
+    margin-right:2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border:1px solid #e3e3e3;
+}
+
+.popup{
+    position:relative;
+    padding:5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    top:75%;
+    left:10px;
+    width: auto !important;
+    color: white;
+}
+
+.is-bubble-container{
+    width:99%;
+    height: auto;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px;
+    padding-left:70px;
+    overflow: hidden;
+}
+
+.is-bubble-container-mobile{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.img{
+    width:96px;
+    height:96px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }

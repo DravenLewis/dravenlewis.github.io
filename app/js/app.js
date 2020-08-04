@@ -88,6 +88,7 @@ function makeMobileChanges(isMobile){
         $(".is-projects").addClass("is-projects-mobile");
         $(".certification-container ").addClass("is-projects-mobile");
         $(".is-message-box").addClass("ismb-m");
+        $(".is-bubble-container").addClass("is-bubble-container-mobile");
         $(".is-projects").css({'height':'400px'});
         $("h1").css({'font-size':'24px'});
 
