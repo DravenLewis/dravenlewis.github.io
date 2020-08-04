@@ -21,9 +21,9 @@ function makeInitialChanges(){
     if(window.pageYOffset > 5){$(".is-nav").addClass("w3-black");}
     $(".age").append(new Date().getFullYear() - 1999);
     if(dev){
-        new ISNotification("#FFFF00","This project is in progress, and may not be fully functioning. <span id = 'dismiss' style = 'cursor:pointer;font-weight:bold;textDecoration:underlined;'>Dismiss</span>",-1,BOTTOM).show();
+        new ISNotification("#FFFF00","This project is in progress, and may not be fully functioning.",-1,BOTTOM).show();
     }else{
-        new ISNotification("#FFFFFF","This site does not collect cookies. <span id = 'dismiss' style = 'cursor:pointer;font-weight:bold;textDecoration:underlined;'>Dismiss</span>",-1,BOTTOM).show();
+        new ISNotification("#FFFFFF","This site does not collect cookies.",-1,BOTTOM).show();
     }
 }
 
@@ -154,8 +154,8 @@ function populateProjectList(){
             //
 
         }else{
-            $(".loader").remove();
-            $(".is-projects").append("<h1>Error Loading Projects from Github</h1>");
+            //$(".loader").remove();
+            //$(".is-projects").append("<h1>Error Loading Projects from Github</h1>");
             console.log(message);
         }
     });

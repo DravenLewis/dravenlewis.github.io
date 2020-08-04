@@ -1,8 +1,6 @@
 var SECOND = 1000;
 var FOREVER = -1;
 
-window.isnLastIndex=-1;
-
 function BoundingBox(up,down,left,right){
     this.top = up;
     this.bottom = down;
@@ -17,21 +15,15 @@ var TOP = new BoundingBox("0px","auto","0px","auto");
 // Color - Color of the notification
 // Text - Content of the notification
 // Length - How long to show the notification, if -1 then forever;
-function ISNotification(color, text, length,BoundingBox = DEFAULT,isDismissable=true){
+function ISNotification(color, text, length,BoundingBox = DEFAULT){
     this.color = color;
     this.text = text;
     this.length = length;
-    this.isDismissable = isDismissable;
-    this.handle=null;
     this.show = function(){
 
         var instance_index = Math.floor((Math.random() * 100));
 
-        var notification_prototype = "<div style = 'width:100%; height:auto; min-height:64px; background-color:"+color+";color:"+this.calculateTextColor(this.color)+"; font-family:Arial;position:fixed;bottom:"+BoundingBox.bottom+";left:"+BoundingBox.left+";right:"+BoundingBox.right+";top:"+BoundingBox.top+";z-index:1000;' class = 'npt-inernal-"+instance_index+"'> <p>";
-        if(this.isDismissable){
-            notification_prototype += "<span id = 'dismiss' style = 'cursor:pointer;font-weight:bold;text-decoration:underlined;float:right;'>Dismiss</span>"
-        };
-        notification_prototype += text + "</p></div>";
+        var notification_prototype = "<div style = 'width:100%; height:auto; min-height:64px; background-color:"+color+";color:"+this.calculateTextColor(this.color)+"; font-family:Arial;position:fixed;bottom:"+BoundingBox.bottom+";left:"+BoundingBox.left+";right:"+BoundingBox.right+";top:"+BoundingBox.top+";z-index:1000;' class = 'npt-inernal-"+instance_index+"'> <p>"+text+"</p></div>";
 
         if(window.jQuery){
             $('body').prepend(notification_prototype);
@@ -47,8 +39,6 @@ function ISNotification(color, text, length,BoundingBox = DEFAULT,isDismissable=
                     $(".npt-inernal-"+instance_index+"").slideToggle();
                 },this.length);
             }
-
-            this.handle = ".npt-inernal-"+instance_index+"";
         }else{
             console.log("[ISNotification] This class requires JQuery, please ensure you have it installed.");
         }
@@ -56,13 +46,5 @@ function ISNotification(color, text, length,BoundingBox = DEFAULT,isDismissable=
     this.calculateTextColor = function(){
         var tint = parseInt(this.color.replace("#",""),16); 
         return ((((tint >> 16) & 0xff)*0.299 + ((tint >> 8) & 0xff)*0.587 + ((tint) & 0xff)*0.114) > 186) ? "#000000" : "#FFFFFF";
-    }
-    this.hide = function(){
-        if(this.handle == null || !window.jQuery){
-            console.log("[ISNotification] This class requires JQuery, please ensure you have it installed.");
-            console.log("[ISNotification] Cannot Close, show() has not been called.");
-        }else{
-            $(this.handle).remove();
-        }
     }
 }

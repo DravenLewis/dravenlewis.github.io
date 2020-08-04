@@ -124,6 +124,30 @@ hr{
     background-image: url("../img/logos/game.svg");
 }
 
+
+/* Landing Style
+--------------------------------------------------------------------*/
+#land-proj{
+    color:white;
+    background: black;
+}
+
+#land-skls{
+    color:white;
+    background: black;
+}
+
+#land-abot{
+    color:white;
+    background: black;
+}
+
+#land-hire{
+    color:white;
+    background: black;
+}
+
+
 /* Class Code
 --------------------------------------------------------------------*/
 
@@ -227,7 +251,8 @@ hr{
 }
 
 .is-section-header{
-    margin-left: 32px;
+    font-size: 42px;
+    padding-left: 32px;
 }
 
 .is-projects{
@@ -387,10 +412,14 @@ hr{
 }
 
 .is-hire-btn{
-    width: 200px;
+    width: 400px;
+    height:64px;
     margin: 0 auto;
     display: block;
     margin-top: 10px !important;
+    background: rgb(0,70,251);
+    background: linear-gradient(13deg, rgba(0,70,251,1) 0%, rgba(0,191,255,1) 100%);
+    text-decoration: none;
 }
 
 .is-bubble{
