@@ -111,5 +111,23 @@ button{
 }
 
 .content-main{
-    
+    margin-top: 35px;
+    padding:20px;
+}
+
+.page-link{
+    width:400px;
+    height:96px;
+    background: white;
+    border-radius:3px;
+    display: inline-block;
+    margin-right: 5px;
+    overflow: hidden;
+    padding:5px;
+    color:#e3e3e3;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.page-link p,h3{
+    margin:0px;   
 }
