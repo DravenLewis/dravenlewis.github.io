@@ -24,28 +24,29 @@
         </h1>
 
 
-
-        <div id="googleMap" style="width:95%;height:400px;"></div>
-
-
-        <script>
-            function myMap() {
-                var mapProp = {
-                    center: new google.maps.LatLng(40.740933, -74.002113),
-                    zoom: 5,
-                };
-                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-            }
-        </script>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvMwZA7wIDdr9g0rrG7Bqhc9LdXDykVMo&callback=myMap"></script>
-
-
         <div class="info" style="padding-left:20px;">
             <h3> Call Us.</h3>
             <p>(555) 123 - 4567 </p>
             <h3>Visit Us.</h3>
             <p>1234 Ice Cream Way,<br /> Chilled Town Maryland,<br /> 12345</p>
+
+            <div id="googleMap" style="width:95%;height:400px;"></div>
+
+
+            <script>
+                function myMap() {
+                    var mapProp = {
+                        center: new google.maps.LatLng(40.740933, -74.002113),
+                        zoom: 5,
+                    };
+                    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                }
+            </script>
+
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvMwZA7wIDdr9g0rrG7Bqhc9LdXDykVMo&callback=myMap"></script>
+
+
             <button class="w3-button w3-black">Contact Us</button>
             <p>Copyright 2020 - Infinite Strike Studios</p>
         </div>
