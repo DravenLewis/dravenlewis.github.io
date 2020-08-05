@@ -1,40 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-    <link rel = "stylesheet" type="text/css" href="../../../common/W3-CSS/w3.css"/>
-    <link rel = "stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../common/W3-CSS/w3.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
-    <script type="application/javascript" src = "../../../common/jquery/JQuery.js"></script>
-    <script type="application/javascript" src = "control.js"></script>
+    <script type="application/javascript" src="../../../common/jquery/JQuery.js"></script>
+    <script type="application/javascript" src="../../../common/infinitestrike/ISNotification.js"></script>
+    <script type="application/javascript" src="control.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvMwZA7wIDdr9g0rrG7Bqhc9LdXDykVMo&callback=myMap"></script>
+
+    <script>
+        function myMap() {
+            var mapProp= {
+                center:new google.maps.LatLng(51.508742,-0.120850),
+                zoom:5,
+            };
+
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+    </script>
 
     <title>Document</title>
 </head>
+
 <body>
     <div class="w3-sidebar w3-bar-block is-side-bar">
-        <h1 class = "w3-black is-text-reactive">
-            Menu
-            <button style = "float:right;margin-top:10px;" class = "w3-button w3-hide-large is-back-button"></button>
+        <h1 class="w3-black is-text-reactive">
+            Info
+            <button style="float:right;margin-top:10px;" class="w3-button w3-hide-large is-back-button"></button>
         </h1>
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-      </div>
-      
-      <div class = "is-content-view" style="margin-left:0%"> <!--15%-->
-        <div class = "w3-container is-main-view">
-            <h1 class = "w3-pink is-header is-text-reactive">
-                <button class = "w3-button w3-hide-large w3-bar-item is-nav-button"></button>
+
+
+
+        <div id="googleMap" style="width:95%;height:400px;"></div>
+
+
+        <div class="info" style="padding-left:20px;">
+            <h3> Call Us.</h3>
+            <p>(555) 123 - 4567 </p>
+            <h3>Visit Us.</h3>
+            <p>1234 Ice Cream Way,<br /> Chilled Town Maryland,<br /> 12345</p>
+            <button class="w3-button w3-black">Contact Us</button>
+            <p>Copyright 2020 - Infinite Strike Studios</p>
+        </div>
+    </div>
+
+    <div class="is-content-view" style="margin-left:0%">
+        <!--15%-->
+        <div class="w3-container is-main-view">
+            <h1 class="w3-pink is-header is-text-reactive">
+                <button class="w3-button w3-hide-large w3-bar-item is-nav-button"></button>
                 Boreas' Ice Cream
             </h1>
-            <div class = "jumbotron">
-                <h1 class = "call-to-action">Come taste the cold, refreshing taste of Boreas.</h1>
+            <div class="jumbotron">
+                <h1 class="call-to-action">Come try the cold, refreshing taste of Boreas.</h1>
             </div>
-            <hr/>
+
+            <hr />
+
+            <div class="w3-container w3-white is-container">
+                <h1>Development Overview<br>
+                    <span style="font-size:20px;margin-top:-10px;">Wednesday, August 5th 2020</span>
+                </h1>
+                <hr/>
+                <h4>&emsp;This is a demo of what a business website could look like. It is clean, simple, and to the point.
+                The layout is compatable with Desktops, Laptops, Tablets and Cell Phones. 
+                </h4><br/>
+
+                <h3> Technologies Used: </h3>
+                <ul>
+                    <li> This demo was built with HTML5 and has the future in mind as far as scalability </li>
+                    <li> This demo uses Javascript to control elements on the fly at load time to ensure compatability</li>
+                    <li> Styles are provided by <a href="https://www.w3schools.com/w3css/defaulT.asp">W3Schools</a> with their w3.css library.</li>
+                    <li> This demo is minimal and only includes the basics of a website, but features can be added.<br/>
+                        Such as:<br/>
+                        <ul>
+                            <li>More Pages</li>
+                            <li>Social Media links and feeds (twitter)</li>
+                            <li>Map to business (Google Maps)</li>
+                            <li>Animated Banner Image</li>
+                            <li>Contact Form</li>
+                        </li>
+                    </li>
+                </ul><br/>
+            </div>
+
+            <hr />
+
+            <div class="w3-container w3-white is-container">
+                <h1>An Exciting Day for Ice Cream!<br>
+                    <span style="font-size:20px;margin-top:-10px;">Wednesday, August 5th 2020</span>
+                </h1>
+
+                <hr />
+
+                <h4>&emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</h4><br />
+
+                <h4>&emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</h4><br />
+
+                <h4>&emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</h4><br />
+
+                <h4>&emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</h4><br />
+
+                <h4>&emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</h4><br />
+
+                <h4>&emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</h4><br />
+            </div>
         </div>
-      </div> 
+    </div>
+
+    <br/>
+
+    <div class = "w3-container w3-mobile" id = "content-footer">
+        <p id = "content-footer-text"> Made with love by Draven of <a href = "http://infinitestrikeltd.github.io/"><img src = "../../../app/img/lowestres-logo.png"/></a> </p>
+    </div>
+
 </body>
+
 </html>
