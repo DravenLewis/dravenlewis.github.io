@@ -45,10 +45,14 @@ Temporary Items
 # Unwanted Files
 *.7z
 *.php
+*.sh
 
 # Application Development Files
 app.js
 run.sh
+build.js
+node_modules/
+package-lock.json
 
 #visual stuido code files
 .vscode/
