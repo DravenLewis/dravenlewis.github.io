@@ -124,6 +124,10 @@ button{
     padding: 50px;
 }
 
+.jumbotron-inner .w3-button{
+    border-radius: 3px;
+}
+
 .jumbotron-inner .cta{
     float: left;
     margin-top: 100px;
@@ -150,10 +154,19 @@ button{
     display: inline-block;
     margin-right: 5px;
     overflow: hidden;
-    padding:5px;
-    color:#e3e3e3;
+    padding:0px;
+    color:#FFFFFF;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    padding-left: 0px;
+    max-width:100%;
+}
+
+.page-link .page-link-inner{
+    padding:5px;
     padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../app/img/UI/lowpoly_trans_2.png");
 }
 
 .page-link:hover{
