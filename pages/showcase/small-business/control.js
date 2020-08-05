@@ -2,6 +2,10 @@ $(document).ready(() => {
    makeMobileChanges();
    
    new ISNotification("#e74c3c","This is not a real site. This is a demo.",FOREVER,BOTTOM,true).show();
+
+   setTimeout(() => {
+    $(".preloader").fadeToggle( "slow", "linear" );
+   }, 1000);
 });
 
 function makeMobileChanges(){
