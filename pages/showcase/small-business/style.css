@@ -1,0 +1,83 @@
+
+@font-face {
+    font-family: HandWriting;
+    src: url("../res/font/aAutoyesClosely.ttf");
+}
+
+hr{
+    margin-left: auto;
+    margin-right: auto;
+    width:85%;
+    height:3px;
+    background-color: #3e3e3e;
+    border-radius: 1px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin:0px;
+    padding:10px;
+}
+
+body, html{
+    margin:0px;
+    padding:0px;
+    background:#e3e3e3;
+}
+
+.is-side-bar{
+    
+}
+
+.is-main-view{
+    padding:0px;
+}
+
+.jumbotron{
+    background-image: url("../img/small-business-jumbotron.jpg");
+    width:100%;
+    min-height:400px;
+    max-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:1px;
+}
+
+.call-to-action{
+    font-family: HandWriting;
+    color:white;
+    font-size: 5rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    margin-top:15vw;
+    margin-left:2vw;
+}
+
+.is-header{
+    position: sticky;
+    top:0px;
+    z-index: 9999;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.is-text-reactive{
+    font-size: 2rem;
+}
+
+.is-nav-button{
+    width:2rem;
+    height:2rem;
+    background-image: url("../../../app/img/UI/img_thumb.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.is-back-button{
+    width:2rem;
+    height:2rem;
+    background-image: url("../../../app/img/UI/img_arrow_down.png");
+    background-size: contain;
+    rotate: -90deg;
+    background-repeat: no-repeat;
+    background-position: center;
+}
