@@ -1,4 +1,6 @@
 
+screen.orientation.lock("portrait");
+
 $(document).ready(() => {
 
     setTimeout(() => {
