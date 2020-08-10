@@ -58,6 +58,9 @@ function makeMobileChanges() {
 }
 
 function isMobile() {
+
+    alert(window.navigator.platform);
+
     if (window.matchMedia("only screen and (max-width: 760px)").matches || screen.orientation.type.includes("land")) {
         return true;
     } else {
