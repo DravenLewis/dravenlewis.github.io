@@ -38,8 +38,9 @@ function makeMobileChanges() {
     }
 }
 
+
 function isMobile() {
-    if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+    if (window.matchMedia("only screen and (max-width: 760px)").matches || screen.orientation == "landscape") {
         return true;
     } else {
         return false;
