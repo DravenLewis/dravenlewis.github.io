@@ -1,0 +1,99 @@
+html, body{
+    margin:0px;
+    padding:0px;
+    background:#e3e3e3;
+}
+
+.hamburger{
+    width:64px !important;
+    height:64px !important;
+    border:none !important;
+    background-image: url("../../../app/img/UI/img_thumb.png");
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -1rem;
+}
+
+.hamburger:hover{
+    border:none !important;
+    background-image: url("../../../app/img/UI/img_thumb.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.back{
+    width:64px !important;
+    height:64px !important;
+    border:none !important;
+    background-image: url("../../../app/img/UI/img_thumb.png");
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -1rem;
+    float:right;
+}
+
+.back:hover{
+    border:none !important;
+    background-image: url("../../../app/img/UI/img_thumb.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.user{
+    background-image: url("../img/personal-website-icon.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.contact{
+   width:95%;
+   margin-left:0.5rem;
+}
+
+.contact:hover{
+    background:#fff !important;
+    color:black !important;
+}
+
+.content-pane{
+    margin-left: auto;
+    margin-right: auto;
+    width:95%;
+    min-width: 95%;
+}
+
+.w3-bar button{
+    height:64px;
+    width:75px;
+}
+
+#content-footer{
+    font-family: Arial, Helvetica, sans-serif;
+    width:100%;
+    height: auto;
+    background-color: rgb(61, 61, 61);
+    color:white;
+    margin: auto;
+    padding: 0px;
+    margin-top: 32px;
+}
+
+#content-footer p,h1,h2,h3,h4,h5,h6{
+    padding-left: 25px;
+}
+
+#content-footer-text{
+    padding: 10px;
+    position: relative;
+    left:100%;
+    transform: translateX(-100%);
+}
+
+.is-bubble-container #i1{background-image: url("../../../app/img/logos/android.svg");}
+.is-bubble-container #i2{background-image: url("../../../app/img/logos/game.svg");}
+.is-bubble-container #i3{background-image: url("../../../app/img/logos/java.svg");}
+.is-bubble-container #i4{background-image: url("../../../app/img/logos/server.svg");}
+.is-bubble-container #i5{background-image: url("../../../app/img/logos/web.svg");}
