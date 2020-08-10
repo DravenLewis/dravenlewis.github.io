@@ -196,10 +196,10 @@ button:hover{background:#000000;color:#FFF;border-bottom:2px solid white;}
 .is-spacer-huge{width:100%;height:200px;}
 .is-spacer-massive{width:100%;height:1000px;}
 
-.is-widget-bubble{width:4rem; height: 4rem; position:fixed; top:90%; left:100%;transform:translateX(-140%); float:left;z-index: 1001;cursor: pointer;background-image: url("../img/plus.png");background-size:24px;background-repeat: no-repeat; background-position: center;}
+.is-widget-bubble{width:4rem; height: 4rem; position:fixed; top:calc(100% - 5rem); left:100%;transform:translateX(-140%); float:left;z-index: 1001;cursor: pointer;background-image: url("../img/plus.png");background-size:24px;background-repeat: no-repeat; background-position: center;}
 .is-widget-bubble-menu{
     width:100%;
-    height:35%;
+    height:15rem;
     position:fixed;
     left:0px;
     top:100%;
