@@ -1,4 +1,4 @@
-
+var notifs = [];
 
 $(document).ready(() => {
 
@@ -14,14 +14,25 @@ $(document).ready(() => {
     $(".is-dismiss").click(() => {
         $(".is-widget-bubble-menu").slideToggle(100);
     });
+    $(".w3-button").click(() => {
+        clear();
+        var notif = new ISNotification("#FFFF00","Demo Button Clicked!",FOREVER,BOTTOM,true);
+        notifs.push(notif);
+        notif.show();
+    });
+
 });
 
+function clear(){
+    for(var i = 0; i < notifs.length; i++){
+        notifs[i].hide();
+    }
+}
 
 function makeMobileChanges() {
 
     $(".hamburger").hide();
     $(".back").hide();
-
 
     if (isMobile()) {
 

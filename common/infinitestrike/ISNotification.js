@@ -27,7 +27,7 @@ function ISNotification(color, text, length,BoundingBox = DEFAULT,isDismissable=
 
         var instance_index = Math.floor((Math.random() * 100));
 
-        var notification_prototype = "<div style = 'width:100%; height:auto; min-height:64px; background-color:"+color+";color:"+this.calculateTextColor(this.color)+"; font-family:Arial;position:fixed;bottom:"+BoundingBox.bottom+";left:"+BoundingBox.left+";right:"+BoundingBox.right+";top:"+BoundingBox.top+";z-index:1000;' class = 'npt-inernal-"+instance_index+"'> <p>";
+        var notification_prototype = "<div style = 'width:100%; height:auto; min-height:64px; background-color:"+color+";color:"+this.calculateTextColor(this.color)+"; font-family:Arial;position:fixed;bottom:"+BoundingBox.bottom+";left:"+BoundingBox.left+";right:"+BoundingBox.right+";top:"+BoundingBox.top+";z-index:10000;' class = 'npt-inernal-"+instance_index+"'> <p>";
         if(this.isDismissable){
             notification_prototype += "<span id = 'dismiss' style = 'cursor:pointer;font-weight:bold;text-decoration:underlined;float:right;'>Dismiss</span>"
         };
