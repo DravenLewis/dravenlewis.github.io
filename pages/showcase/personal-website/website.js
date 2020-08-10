@@ -21,6 +21,14 @@ $(document).ready(() => {
         notif.show();
     });
 
+    window.addEventListener("resize",() => {
+        $(".preloader").show();
+        setTimeout(() => {
+            $(".preloader").fadeToggle("slow", "linear");
+        }, 1000);
+    
+        makeMobileChanges();
+    },false);
 });
 
 function clear(){
