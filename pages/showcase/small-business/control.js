@@ -40,7 +40,7 @@ function makeMobileChanges() {
 
 
 function isMobile() {
-    if (window.matchMedia("only screen and (max-width: 760px)").matches || screen.orientation == "landscape") {
+    if (window.matchMedia("only screen and (max-width: 760px)").matches || screen.orientation.type.includes("land")) {
         return true;
     } else {
         return false;
