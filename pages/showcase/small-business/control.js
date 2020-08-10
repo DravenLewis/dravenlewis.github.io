@@ -39,10 +39,12 @@ function makeMobileChanges() {
 }
 
 
-function isMobile() {
-    if (window.matchMedia("only screen and (max-width: 760px)").matches || screen.orientation.type.includes("land")) {
+function isMobile(){
+    var UA = navigator.userAgent || navigator.vendor || window.opera;
+    if(/Android|iP(ad|hone|od)/.test(UA)){ // Device Not Supported in Full Version
         return true;
-    } else {
-        return false;
+    }else if(window.matchMedia("only screen and (max-width: 760px)").matches){ // Window Size not supported
+        return true;
     }
+    return false;
 }
