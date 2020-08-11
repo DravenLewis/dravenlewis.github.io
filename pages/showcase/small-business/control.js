@@ -1,3 +1,5 @@
+const controller = new window.strike();
+
 $(document).ready(() => {
     setTimeout(() => {
         $(".preloader").fadeToggle("slow", "linear");
@@ -5,18 +7,22 @@ $(document).ready(() => {
     makeMobileChanges();
     new ISNotification("#e74c3c", "This is not a real site. This is a demo.", FOREVER, BOTTOM, true).show()
 
-    window.addEventListener("resize",() => {
-        $(".preloader").show();
-        setTimeout(() => {
-            $(".preloader").fadeToggle("slow", "linear");
-        }, 1000);
+
+    if(controller){
+        controller.init();
+        controller.onOrientationChange = () => {
+            $(".preloader").show();
+            setTimeout(() => {
+                $(".preloader").fadeToggle("slow", "linear");
+            }, 1000);
     
-        makeMobileChanges();
-    },false);
+            makeMobileChanges();
+        }
+    }
 });
 
 function makeMobileChanges() {
-    if (isMobile()) {
+    if (controller.isMobile()) {
 
         $(".is-main-view").css({ "margin-left": "0px" });
         $(".is-side-bar").css({ "width": "0px" });

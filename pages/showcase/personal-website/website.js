@@ -1,4 +1,5 @@
 var notifs = [];
+var strikeController = new window.strike();
 
 $(document).ready(() => {
 
@@ -21,14 +22,26 @@ $(document).ready(() => {
         notif.show();
     });
 
-    window.addEventListener("resize",() => {
+    /*window.addEventListener("resize",() => {
         $(".preloader").show();
         setTimeout(() => {
             $(".preloader").fadeToggle("slow", "linear");
         }, 1000);
     
         makeMobileChanges();
-    },false);
+    },false);*/
+
+    if(strikeController){
+        strikeController.init();
+        strikeController.onOrientationChange = () => {
+            $(".preloader").show();
+                setTimeout(() => {
+                $(".preloader").fadeToggle("slow", "linear");
+            }, 1000);
+    
+            makeMobileChanges();
+        };
+    }
 });
 
 function clear(){
@@ -42,11 +55,10 @@ function makeMobileChanges() {
     $(".hamburger").hide();
     $(".back").hide();
 
-    if (isMobile()) {
+    if (strikeController.isMobile()) {
 
         $(".hamburger").show();
         $(".back").show();
-
 
         $(".main-content").css({ "margin-left": "0px" });
         $(".w3-sidebar").css({ "width": "0px" });
@@ -74,14 +86,4 @@ function makeMobileChanges() {
         $(".main-content").css({ "margin-left": "20%" });
         $(".w3-sidebar").css({ "width": "20%" });
     }
-}
-
-function isMobile(){
-    var UA = navigator.userAgent || navigator.vendor || window.opera;
-    if(/Android|iP(ad|hone|od)/.test(UA)){ // Device Not Supported in Full Version
-        return true;
-    }else if(window.matchMedia("only screen and (max-width: 760px)").matches){ // Window Size not supported
-        return true;
-    }
-    return false;
 }
