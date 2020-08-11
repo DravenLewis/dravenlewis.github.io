@@ -34,6 +34,9 @@ $(document).ready(() => {
     if(strikeController){
         strikeController.init();
         strikeController.onOrientationChange = () => {
+
+            alert("Test");
+
             $(".preloader").show();
                 setTimeout(() => {
                 $(".preloader").fadeToggle("slow", "linear");
