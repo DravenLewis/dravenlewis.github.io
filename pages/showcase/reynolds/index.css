@@ -1,0 +1,143 @@
+body,html{
+    width:100%;
+    height:100%;
+}
+
+nav{
+    position: fixed;
+    width:100%;
+    top:0px;
+    left:0px;
+    z-index: 9998;
+}
+
+.social-icons {
+    width: 2rem;
+    height: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:20px;
+}
+
+.nav-mobile{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:-100%;
+    z-index:9999;
+}
+
+.nav-mobile button{
+    width:100%;
+    background:rgba(0,0,0,0.2);
+    height:4rem;
+    margin-bottom:1em;
+}
+
+.nav-mobile .close{
+    width:4rem;
+    height:4rem;
+    background-image: url("./res/icons/UI/close-white-18dp.svg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-top:1rem;
+}
+
+.nav-mobile .socials{
+    height:4rem;
+    padding:0px;
+}
+
+.nav-mobile .socials .social-icons{
+    height:100%;
+    width:25%;
+    margin:0px;
+    background-position: center;
+    background-size:32px 32px;
+}
+
+.header-link{text-decoration: none;}
+.header-links button#active{border-bottom:2px solid #e91e63;}
+.title-small{
+    margin-top:1.3rem;
+    margin-left: 2rem;
+}
+.menu{
+    background:url("./res/icons/UI/menu-black-18dp.svg");
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position:center;
+    width:4rem;
+    height:4rem;
+    display: inline-block;
+    margin-top:5px;
+}
+
+#soc-facebook{background-image:url("./res/icons/social/facebook.svg");}
+#soc-twitter{background-image:url("./res/icons/social/twitter.svg");}
+#soc-instagram{background-image:url("./res/icons/social/instagram.svg");}
+#soc-pintrest{background-image:url("./res/icons/social/pinterest.svg");}
+
+#jumbo-hook{
+    background-image: url("https://cdn.avopix.com/photos/detail/d_425465_shop-counter-bartender.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow:hidden;
+}
+
+#jumbo-content{
+    width:90%;
+    position: relative;
+    left:5%;
+    top:40%;
+    padding:0px;
+}
+
+#jumbo-content-small{
+    width:90%;
+    position: relative;
+    left:5%;
+    top:40%;
+    padding:0px;
+}
+
+#jumbo-content-small .text{
+    color:white;
+    text-shadow:2px 2px 5px rgba(0,0,0,0.3);
+}
+
+#jumbo-hook #inner{
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top:0px;
+    left:0px;
+}
+
+#jumbo-content .text{
+    color:white;
+    text-shadow:2px 2px 5px rgba(0,0,0,0.3);
+}
+
+#jumbo-content h1{
+    font-size:72px;
+}
+
+.footer-icon{
+    width:1.5rem;
+    height:1.5rem;
+    display: inline-block;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    margin-right:5px;
+}
+
+#footer-address{background:url("./res/icons/UI/place-white-18dp.svg");}
+#footer-phone{background:url("./res/icons/UI/phone-white-18dp.svg");}
+#footer-email{background:url("./res/icons/UI/mail-white-18dp.svg");}
